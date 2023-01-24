@@ -2,7 +2,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
-loaded_model= pickle.load(open('D:/Model/model.sav','rb'))
+loaded_model= pickle.load(open('model.sav','rb'))
 
 
 def brainStroke(input_data):
