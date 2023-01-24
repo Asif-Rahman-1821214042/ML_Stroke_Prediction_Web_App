@@ -76,7 +76,7 @@ def brainStroke(input_data):
 
 
 def main():
-    st.title('Brain Stroke Predictiom Web App')
+    st.title('Brain Stroke Prediction Web App')
     
     gender=st.text_input("Gender")
     age=st.text_input("Age")
