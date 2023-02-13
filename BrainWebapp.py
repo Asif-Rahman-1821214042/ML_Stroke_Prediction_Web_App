@@ -6,9 +6,12 @@ loaded_model= pickle.load(open('model.sav','rb'))
 
 
 def brainStroke(input_data):
-    input_np=np.asarray(input_data)
+    input_np=np.asarray(input_data,dtype=object)
     input_rs=input_np.reshape(1,-1)
-    prd=loaded_model.predict(input_rs)
+    try:
+      prd=loaded_model.predict(input_rs)
+    except:
+      return 'Fill the required space or dont use string'
     if(prd==0):
       return 'Patient has not stroke'
     else:
