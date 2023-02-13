@@ -2,6 +2,7 @@ import numpy as np
 import pickle
 import streamlit as st
 
+
 loaded_model= pickle.load(open('model.sav','rb'))
 
 
@@ -11,7 +12,7 @@ def brainStroke(input_data):
     try:
       prd=loaded_model.predict(input_rs)
     except:
-      return 'Fill the required space or dont use string'
+      return 'Fill the required space or do not use string'
     if(prd==0):
       return 'Patient has not stroke'
     else:
@@ -31,6 +32,7 @@ def main():
     Residence_type=st.text_input("Residence Type")
     avg_glucose_level=st.text_input("Avg Glucose")
     bmi=st.text_input("BMI")
+     
     
     diagnosis= ''
     if st.button("Check"):
